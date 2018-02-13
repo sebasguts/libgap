@@ -2918,6 +2918,13 @@ static Int InitLibrary (
     AssConstantGVar( GVarName( "IsHPCGAP" ), False );
 #endif
 
+#if defined(LIBGAP)
+    AssConstantGVar( GVarName( "IsLIBGAP" ), True );
+#else
+    AssConstantGVar( GVarName( "IsLIBGAP" ), False );
+#endif
+
+
     /* return success                                                      */
     return PostRestore( module );
 }
