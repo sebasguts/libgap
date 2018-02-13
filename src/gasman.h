@@ -1144,4 +1144,10 @@ extern void CallbackForAllBags(
 void *AllocateMemoryBlock(UInt size);
 #endif
 
+/*
+ * If not 0 this function will be called in
+ * CollectBags to allow users of libgap to mark bags
+ */
+extern TNumExtraMarkFuncBags ExtraMarkFuncBags;
+
 #endif // GAP_GASMAN_H
