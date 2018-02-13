@@ -2819,6 +2819,7 @@ static StructGVarFunc GVarFuncs [] = {
 
 };
 
+Obj EvalString_;
 
 /****************************************************************************
 **
@@ -2844,6 +2845,7 @@ static Int InitKernel (
     ImportFuncFromLibrary(  "ViewObj", 0L );
     ImportFuncFromLibrary(  "Error", &Error );
     ImportFuncFromLibrary(  "ErrorInner", &ErrorInner );
+    ImportFuncFromLibrary(  "EvaluateString", &EvalString_ );
 
 #ifdef HPCGAP
     DeclareGVar(&GVarTHREAD_INIT, "THREAD_INIT");
@@ -2918,7 +2920,7 @@ static Int InitLibrary (
     AssConstantGVar( GVarName( "IsHPCGAP" ), False );
 #endif
 
-#if defined(LIBGAP)
+#if defined(BUILD_LIBGAP)
     AssConstantGVar( GVarName( "IsLIBGAP" ), True );
 #else
     AssConstantGVar( GVarName( "IsLIBGAP" ), False );
