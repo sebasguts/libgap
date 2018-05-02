@@ -2845,7 +2845,7 @@ static Int InitKernel (
     ImportFuncFromLibrary(  "ViewObj", 0L );
     ImportFuncFromLibrary(  "Error", &Error );
     ImportFuncFromLibrary(  "ErrorInner", &ErrorInner );
-    ImportFuncFromLibrary(  "EvaluateString", &EvalString_ );
+    ImportFuncFromLibrary(  "LIBGAP_EvalString", &EvalString_ );
 
 #ifdef HPCGAP
     DeclareGVar(&GVarTHREAD_INIT, "THREAD_INIT");
